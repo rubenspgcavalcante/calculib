@@ -10,6 +10,10 @@ const excludes = npm_package_config_excludes
 
 const excludeContext = new RegExp(`^(?!.*(?:${excludes.join('|')})).*\\.op\\.js$`);
 
+if(excludes.length){
+  console.info(`[INFO] Custom build detected. Excluding from bundle: ${excludes.join(', ')}`);
+}
+
 module.exports = (env = {}) => {
   const { analyze = false } = env;
   return {
