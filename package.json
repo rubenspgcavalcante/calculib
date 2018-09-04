@@ -1,0 +1,24 @@
+{
+  "name": "calculib",
+  "version": "1.0.0",
+  "description": "A example of dynamically exlcuding modules on build time",
+  "main": "dist/main.js",
+  "repository": "https://github.com/rubenspgcavalcante/calculib",
+  "author": "Rubens Pinheiro Goncalves Cavalcante",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "webpack --mode production",
+    "analyze": "webpack --mode production --env.analyze"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "webpack": "^4.17.1",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
